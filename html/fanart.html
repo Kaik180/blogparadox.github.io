@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fanart y Contenido</title>
+  <link rel="stylesheet" href="../css/estilos.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 40px 20px;
+      background-color: #0f0c29; /* Fondo púrpura oscuro */
+      background-image: repeating-linear-gradient(
+        45deg,
+        #1f1c3c 0,
+        #1f1c3c 5px,
+        #251e48 5px,
+        #251e48 10px
+      );
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #c4b9ff;
+      min-height: 100vh;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #9b5de5; /* Neón púrpura */
+      text-shadow: 0 0 15px #9b5de5;
+      margin-bottom: 40px;
+    }
+
+    p.descripcion {
+      max-width: 700px;
+      margin: 0 auto 50px auto;
+      font-size: 1.2rem;
+      text-align: center;
+      color: #b7a5ff;
+      text-shadow: 0 0 6px #b7a5ff;
+    }
+
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .tarjeta {
+      background: linear-gradient(135deg, #3c2f77, #241c4b);
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 0 15px #6f42c1;
+      cursor: pointer;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .tarjeta:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 30px #9b5de5, 0 0 45px #9b5de5;
+    }
+
+    .tarjeta img {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-bottom: 3px solid #7c3aed; /* Azul neón */
+      transition: filter 0.3s ease;
+    }
+
+    .tarjeta:hover img {
+      filter: brightness(1.15);
+    }
+
+    .info {
+      padding: 15px 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: #d6ccff;
+      text-align: center;
+    }
+
+    .info p {
+      font-weight: 600;
+      font-size: 1rem;
+      margin: 0;
+      letter-spacing: 0.03em;
+      text-shadow: 0 0 5px #7c3aed;
+    }
+  </style>
+</head>
+<body>
+   <nav class="menu-fanart">
+    <ul>
+     <li><a href="comunidad.html">Comunidad</a></li>
+     <li><a href="comunidad-retos.html">Retos</a></li>
+     <li><a href="comunidad-votacion.html">Votación</a></li>
+     <li><a href="comunidad-fanart.html" class="activo">Fanarts</a></li>
+     <li><a href="comunidad-ranking.html">Ranking</a></li>
+    </ul>
+   </nav>
+
+
+  <h1>Fanart y Contenido</h1>
+  <p class="descripcion">
+    Aquí comparto el arte y contenido creado por mi comunidad y colaboradores. ¡Disfruta y descubre a los autores!
+  </p>
+
+  <section class="galeria">
+    <div class="tarjeta" tabindex="0" aria-label="Fanart de Jane Doe">
+      <img src="../Img/prueba.webp" alt="Fanart 1" />
+      <div class="info">
+        <p>Arte por Jane Doe</p>
+      </div>
+    </div>
+    <div class="tarjeta" tabindex="0" aria-label="Fanart de Carlos M.">
+      <img src="../Img/prueba.webp" alt="Fanart 2" />
+      <div class="info">
+        <p>Arte por Carlos M.</p>
+      </div>
+    </div>
+    <div class="tarjeta" tabindex="0" aria-label="Fanart de Ana López">
+      <img src="../Img/prueba.webp" alt="Fanart 3" />
+      <div class="info">
+        <p>Arte por Ana López</p>
+      </div>
+    </div>
+    <div class="tarjeta" tabindex="0" aria-label="Contenido de ParadoxKaiser12">
+      <img src="../Img/prueba.webp" alt="Contenido 1" />
+      <div class="info">
+        <p>Contenido creado por ParadoxKaiser12</p>
+      </div>
+    </div>
+    <!-- Más tarjetas aquí -->
+  </section>
+
+</body>
+</html>

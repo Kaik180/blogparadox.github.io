@@ -1,0 +1,128 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #0d0d0d; /* Fondo negro */
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(90deg, #7f00ff, #0000ff); /* morado a azul */
+  color: #ffffff;
+  text-align: center;
+  padding: 2em 1em;
+  box-shadow: 0 0 20px #7f00ff;
+}
+
+header h1 {
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
+}
+
+header p {
+  font-size: 1.2em;
+  color: #dcdcdc;
+}
+
+/* Menú de navegación */
+nav {
+  margin-top: 1em;
+}
+
+nav a {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 1em;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #00ffff;
+}
+
+/* Secciones principales */
+main {
+  padding: 2em;
+  max-width: 1000px;
+  margin: auto;
+}
+
+section {
+  margin-bottom: 3em;
+}
+
+/* Títulos de sección */
+section h2 {
+  font-size: 2em;
+  margin-bottom: 0.5em;
+  color: #00ffff;
+  border-bottom: 2px solid #7f00ff;
+  display: inline-block;
+  padding-bottom: 0.2em;
+}
+
+/* Lista de publicaciones */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin: 1em 0;
+}
+
+ul li a {
+  color: #b366ff;
+  text-decoration: none;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+ul li a:hover {
+  color: #00ffff;
+}
+
+/* Botones de redes */
+.botones-redes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.botones-redes a {
+  background-color: #1a1a1a;
+  color: #00ffff;
+  border: 2px solid #7f00ff;
+  padding: 0.75em 1.5em;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.botones-redes a:hover {
+  background-color: #7f00ff;
+  color: #ffffff;
+  border-color: #00ffff;
+  box-shadow: 0 0 10px #00ffff;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  background-color: #111;
+  padding: 1em;
+  font-size: 0.9em;
+  color: #999;
+  border-top: 1px solid #222;
+}

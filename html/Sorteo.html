@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Sorteo de la Comunidad</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="css/estilos-comunidad.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #2c3e50, #000000);
+      color: #fff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+    }
+
+    .menu-sorteo {
+      background: rgba(0, 0, 0, 0.6);
+      padding: 12px 0;
+      text-align: center;
+      border-bottom: 2px solid #fff2;
+    }
+
+    .menu-sorteo ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline-flex;
+      gap: 20px;
+    }
+
+    .menu-sorteo a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .menu-sorteo a:hover,
+    .menu-sorteo a.activo {
+      background: #fff;
+      color: #000;
+    }
+
+    .sorteo-container {
+      display: flex;
+      flex-wrap: wrap;
+      max-width: 1100px;
+      margin: 40px auto;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 15px;
+      padding: 30px;
+      box-shadow: 0 0 20px #00d9ff33;
+      gap: 30px;
+    }
+
+    .formulario-sorteo {
+      flex: 2;
+      min-width: 300px;
+    }
+
+    .info-sorteo {
+      flex: 1;
+      min-width: 250px;
+      background: #1b1b2f;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px #00d9ff55;
+    }
+
+    .info-sorteo h3 {
+      color: #00d9ff;
+      margin-bottom: 10px;
+    }
+
+    .info-sorteo ul {
+      list-style: disc;
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+
+    .temporizador {
+      font-size: 1.5em;
+      font-weight: bold;
+      text-align: center;
+      padding: 10px;
+      background-color: #222;
+      border-radius: 10px;
+      box-shadow: 0 0 8px #00d9ff88;
+      margin-top: 10px;
+    }
+
+    .formulario-sorteo iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 12px #00d9ff77;
+    }
+
+    footer {
+      text-align: center;
+      color: #aaa;
+      margin: 40px 0 10px;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="menu-sorteo">
+    <ul>
+      <li><a href="comunidad.html">Comunidad</a></li>
+      <li><a href="comunidad-retos.html">Retos</a></li>
+      <li><a href="comunidad-votacion.html">Votación</a></li>
+      <li><a href="comunidad-fanart.html">Fanarts</a></li>
+      <li><a href="comunidad-ranking.html">Ranking</a></li>
+      <li><a href="comunidad-sorteo.html" class="activo">Sorteo</a></li>
+    </ul>
+  </nav>
+
+  <div class="sorteo-container">
+    <!-- Formulario Google Forms -->
+    <div class="formulario-sorteo">
+      <h1>🎁 Participa en el Sorteo</h1>
+      <p>Rellena el formulario a continuación para entrar en el sorteo mensual. ¡Es gratis y solo toma unos segundos!</p>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeR7CbR294fClTY2qYX9IUnYk8lRf6Djvx1jF07i43kyukTPg/viewform?embedded=true" width="640" height="721" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+    </div>
+
+    <!-- Información adicional -->
+    <div class="info-sorteo">
+      <h3>Premios del Mes</h3>
+      <ul>
+        <li>🎮 Tarjeta Steam 20€</li>
+        <li>👕 Camiseta exclusiva</li>
+        <li>🎤 Mención en directo</li>
+      </ul>
+
+      <h3>Tiempo restante</h3>
+      <div class="temporizador" id="temporizador">Cargando…</div>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 ParadoxKaiser12 – Todos los derechos reservados.
+  </footer>
+
+  <script>
+    // FECHA LÍMITE DEL SORTEO (modifica esta fecha)
+    const fechaFinal = new Date("2025-06-30T23:59:59").getTime();
+
+    const temporizador = document.getElementById("temporizador");
+
+    const actualizarTemporizador = () => {
+      const ahora = new Date().getTime();
+      const distancia = fechaFinal - ahora;
+
+      if (distancia < 0) {
+        temporizador.innerText = "⏳ Finalizado";
+        return;
+      }
+
+      const dias = Math.floor(distancia / (1000 * 60 * 60 * 24));
+      const horas = Math.floor((distancia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutos = Math.floor((distancia % (1000 * 60 * 60)) / (1000 * 60));
+      const segundos = Math.floor((distancia % (1000 * 60)) / 1000);
+
+      temporizador.innerText = `${dias}d ${horas}h ${minutos}m ${segundos}s`;
+    };
+
+    actualizarTemporizador();
+    setInterval(actualizarTemporizador, 1000);
+  </script>
+
+</body>
+</html>

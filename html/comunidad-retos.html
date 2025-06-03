@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Retos Semanales - Comunidad</title>
+  <style>
+    /* Reset básico */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #010a10;
+      color: #a0f0d1;
+      min-height: 100vh;
+      padding: 40px 20px;
+      background-image: 
+        linear-gradient(rgba(0,255,192,0.1) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,255,192,0.1) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 3rem;
+      color: #00ffc8;
+      text-shadow: 0 0 15px #00ffc8;
+      margin-bottom: 30px;
+      font-weight: 900;
+      letter-spacing: 0.15em;
+    }
+
+    .reto-card {
+      background: linear-gradient(145deg, #0a2a22, #004d40);
+      border: 2px solid #00ffc8;
+      border-radius: 20px;
+      max-width: 700px;
+      margin: 20px auto;
+      padding: 25px 30px;
+      box-shadow: 0 0 20px #00ffc8;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .reto-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 0 35px #00ffc8, 0 0 60px #00ffc8 inset;
+    }
+
+    .reto-card h2 {
+      font-size: 2rem;
+      margin-bottom: 15px;
+      color: #00ffde;
+      text-shadow: 0 0 10px #00ffde;
+    }
+
+    .reto-card p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: #a0f0d1;
+      text-shadow: 0 0 5px #008f75;
+    }
+
+    /* Animación ligera de entrada */
+    @keyframes fadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .reto-card {
+      animation: fadeUp 1s ease forwards;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Retos Semanales</h1>
+
+  <div class="reto-card" tabindex="0">
+    <h2>Reto #1: 100 eliminaciones en Valorant</h2>
+    <p>
+      Completa 100 eliminaciones en partidas públicas durante esta semana para ganar una medalla especial.
+    </p>
+  </div>
+
+  <div class="reto-card" tabindex="0">
+    <h2>Reto #2: Stream 4 días seguidos</h2>
+    <p>
+      Haz streaming durante 4 días consecutivos y participa en un sorteo exclusivo para los que logren completar este desafío.
+    </p>
+  </div>
+
+  <div class="reto-card" tabindex="0">
+    <h2>Reto #3: Mejor jugada de la semana</h2>
+    <p>
+      Envía tu mejor jugada y gana la posibilidad de aparecer destacado en el canal y redes sociales.
+    </p>
+  </div>
+  
+
+</body>
+</html>
