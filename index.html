@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi Vida como Streamer</title>
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+
+  <header>
+    <h1>¡Hola, soy ParadoxKaiser12!</h1>
+    <p>Streamer y creador de contenido en Twitch, YouTube, TikTok y Kick </p>
+    <div id="codigo-secreto" style="display: none; margin-top: 20px; text-align: center;">
+  <p><strong>Código secreto: ↑ ↑ ↓ ↓ ← → ← → B A</strong> ¡¡¡¡¡¡CoXXXXXXd!!!!!!!</p>
+</div>
+
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="html/sobre-mi.html">Sobre mí</a>
+      <a href="html/contenido.html">Contenido</a>
+      <a href="html/blog.html">Blog</a>
+      <a href="html/apoyo.html">Apóyame</a>
+      <a href="html/contacto.html">Contacto</a>
+      <a href="html/Comunidad.html">Comunidad</a>
+      <a href="html/Sorteo.html">Sorteos</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="bienvenida">
+      <h2>Bienvenido a mi blog</h2>
+      <p>En este espacio comparto todo sobre mi vida como streamer: consejos, historias, y cómo puedes crecer en redes como Twitch, YouTube o TikTok.</p>
+    </section>
+
+   <section class="destacados">
+  <h2>Mis últimas publicaciones</h2>
+  <div class="entradas-grid">
+
+    <!-- Entrada 1 -->
+    <a href="blog/como-crecer-en-tiktok.html" class="card-link">
+      <article class="entrada">
+        <img src="Img/prueba.webp" alt="Miniatura del post">
+        <h3>Cómo crecer en TikTok si eres streamer</h3>
+        <p>Consejos prácticos para crecer desde cero y usar TikTok como herramienta para impulsar tu canal de Twitch o YouTube.</p>
+      </article>
+    </a>
+
+    <!-- Entrada 2 -->
+    <a href="blog/que-hacer-sin-viewers.html" class="card-link">
+      <article class="entrada">
+        <img src="Img/pngtree-an-image-of-a-video-game-controller-that-consists-of-many-picture-image_2667717.png" alt="Miniatura del post">
+        <h3>¿Sin viewers? Trucos que me funcionaron</h3>
+        <p>Qué hacer cuando nadie te ve en directo. Ideas útiles que a mí me funcionaron para ganar visibilidad.</p>
+      </article>
+    </a>
+
+    <!-- Entrada 3 -->
+    <a href="blog/setup-streaming-barato.html" class="card-link">
+      <article class="entrada">
+        <img src="Img/R.jpg" alt="Miniatura del post">
+        <h3>Mi setup barato para hacer streaming</h3>
+        <p>Todo lo que uso para streamear con bajo presupuesto, sin perder calidad ni estilo.</p>
+      </article>
+    </a>
+
+  </div>
+</section>
+
+    <section>
+      <h2>Mis redes principales</h2>
+      <div class="redes-grid">
+        <div class="red-social">
+          <img src="Img/OIP.jpg" alt="Twitch">
+          <a href="https://twitch.tv/ParadoxKaiser12" target="_blank">Sígueme en Twitch</a>
+        </div>
+
+        <div class="red-social">
+          <img src="Img/logo-youtube-png-clipart-11.png" alt="YouTube">
+          <a href="https://youtube.com/@ParadoxKaiser12" target="_blank">Mira mis videos en YouTube</a>
+        </div>
+
+        <div class="red-social">
+          <img src="Img/kick-logo-vector-download-kick-streaming-icon-logo-vector-eps_691560-10814.avif" alt="Kick">
+          <a href="https://kick.com/ParadoxKaiser186" target="_blank">Streams en Kick</a>
+        </div>
+
+        <div class="red-social">
+          <img src="Img/R.png" alt="TikTok">
+          <a href="https://tiktok.com/@tuusuario" target="_blank">Clips en TikTok</a>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Únete a mi servidor de Discord</h2>
+      <div class="discord-card">
+        <img src="Img/discord.svg" alt="Discord">
+        <div>
+          <p>¿Quieres hablar conmigo o con la comunidad? Únete a nuestro servidor de Discord, ¡estás invitado!</p>
+          <a href="https://discord.gg/Pzh9rc3zeC" target="_blank" class="boton-neon">Entrar al servidor</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 ParadoxKaiser12 - Todos los derechos reservados.</p>
+  </footer>
+  <script>
+  let inputSequence = '';
+  const retroCode = 'modoretro';
+
+  document.addEventListener('keydown', (e) => {
+    inputSequence += e.key.toLowerCase();
+    if (inputSequence.length > retroCode.length) {
+      inputSequence = inputSequence.slice(-retroCode.length);
+    }
+
+    if (inputSequence === retroCode) {
+      document.body.classList.toggle('retro');
+
+      const codigo = document.getElementById('codigo-secreto');
+      if (document.body.classList.contains('retro')) {
+        alert('🕹️ ¡Modo Retro Activado!');
+        codigo.style.display = 'block';
+      } else {
+        alert('🎮 Modo Retro Desactivado');
+        codigo.style.display = 'none';
+      }
+    }
+  });
+</script>
+
+<div id="aviso-cookies" class="aviso-cookies">
+  <p>Este sitio utiliza cookies para mejorar la experiencia del usuario. <a href="politica-cookies.html" target="_blank">Más info</a></p>
+  <button id="btn-aceptar-cookies">Aceptar</button>
+</div>
+
+<script>
+  function setCookie(nombre, valor, dias) {
+    const fecha = new Date();
+    fecha.setTime(fecha.getTime() + (dias * 24 * 60 * 60 * 1000));
+    let expiracion = "expires=" + fecha.toUTCString();
+    document.cookie = nombre + "=" + valor + ";" + expiracion + ";path=/";
+  }
+
+  function getCookie(nombre) {
+    let nombreEQ = nombre + "=";
+    let cookies = document.cookie.split(';');
+    for (let i = 0; i < cookies.length; i++) {
+      let c = cookies[i];
+      while (c.charAt(0) === ' ') c = c.substring(1);
+      if (c.indexOf(nombreEQ) === 0) return c.substring(nombreEQ.length, c.length);
+    }
+    return null;
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    if (!getCookie('cookiesAceptadas')) {
+      document.getElementById('aviso-cookies').style.display = 'flex';
+    }
+
+    document.getElementById('btn-aceptar-cookies').addEventListener('click', () => {
+      setCookie('cookiesAceptadas', 'true', 365);
+      document.getElementById('aviso-cookies').style.display = 'none';
+    });
+  });
+</script>
+
+</body>
+</html>
